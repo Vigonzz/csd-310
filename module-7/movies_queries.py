@@ -21,7 +21,7 @@ try:
     #select all fields for studio table
     cursor.execute("SELECT * FROM studio")
     studio_records = cursor.fetchall()
-    print("-- DISPLAYING Studio RECORDS --")
+    print("\n-- DISPLAYING Studio RECORDS --")
     for record in studio_records:
         print(f'Studio ID: {record[0]}')
         print(f'Studio Name: {record [1]}')
@@ -48,7 +48,7 @@ try:
     #Get a list of film names and directors ensure it is ordered correctly
     cursor.execute("SELECT film.film_name, film.film_director FROM film ORDER BY film.film_director")
     director_records = cursor.fetchall()
-    print("-- DISPLAYING Director RECORDS in Order")
+    print("-- DISPLAYING Director RECORDS in Order --")
     for record in director_records:
         print(f'Film Name: {record[0]}')
         print(f'Director: {record[1]}')
